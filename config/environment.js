@@ -6,6 +6,12 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'style-src': '\'self\' \'unsafe-inline\' fonts.googleapis.com',
+      'font-src': '\'self\' fonts.gstatic.com',
+      'img-src': '\'self\' *.gravatar.com data:',
+      'connect-src': '\'self\' http://localhost'
+    },
     
     EmberENV: {
       FEATURES: {
@@ -16,7 +22,7 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       },
-      apiBaseUrl= "localhost:3000"
+      apiBaseUrl:'localhost:3000'
     },
 
     APP: {

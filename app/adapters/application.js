@@ -2,5 +2,5 @@
 import GraphQLAdapter from 'ember-graphql-adapter';
 
 export default GraphQLAdapter.extend({
-  endpoint: `${EmberENV.apiBaseUrl}/graph`
-});
+  endpoint: `http://localhost:3000/graphql`
+});  
